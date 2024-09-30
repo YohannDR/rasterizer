@@ -36,45 +36,45 @@ Below is a list of the different features available in this project :
 
 Given a list of 3 points in Normalized Device Coordinates (NDC) space, the standard transformation pipeline (model, view, projection, viewport) is applied and the triangle is rendered in screen space while being filled with its color.
 
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106509664386035722/image.png "WhiteTriangle")
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106510282181857341/image.png "RedTriangle")
+![thumbnail](screenshots/white_triangle.png "WhiteTriangle")
+![thumbnail](screenshots/red_triangle.png "RedTriangle")
 
 ## Camera
 
 A simple camera can be used to view the scene, its position and center can be changed, as well as its FOV and near/far clip planes.
 The corresponding view and projection matrices based on these values are forwarded to the renderer.
 
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106510568170471464/image.png "Cam")
+![thumbnail](screenshots/camera.png "Cam")
 
 ## Color interpolation
 
 The colors between the points are linearly interpolated inside of the triangle, thus resulting in a blend between the colors.
 
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106511311505993818/image.png "ColInter")
+![thumbnail](screenshots/interpolation.png "ColInter")
 
 ## Textures
 
 Textures can be loaded from a file (either PNG or JPG) and applied to any triangle by using texture coordinates.
 The texture is merged with the interpolated color showed previously.
 
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106513684311842827/image.png "Texture")
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106515498478346350/image.png "TextureCol")
+![thumbnail](screenshots/texture.png "Texture")
+![thumbnail](screenshots/texture_color.png "TextureCol")
 
 ## Depth buffer
 
 The depth buffer allows triangles that should be rendered behind other triangles to be partially discarded (on a fragment basis), which allows correct 3D order rendering and overlap.
 
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106517082725683250/image.png "Depth")
+![thumbnail](screenshots/depth.png "Depth")
 
 ## 3D models
 
 3D models using the Obj format can be loaded and rendered.
 
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106518321903435816/image.png "Model")
+![thumbnail](screenshots/model.png "Model")
 
 Each object has its own position, rotation and scaling and they can be modified independently.
 
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106518893599670272/image.png "ModelControls")
+![thumbnail](screenshots/model_controls.png "ModelControls")
 
 ## Lights
 
@@ -82,10 +82,10 @@ The support for 8 simultaneous lights is currently in place, each light uses the
 
 The lights also support attenuation (linear, quadratic and radius).
 
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106556340459032646/image.png "Ambiant")
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106556413154697326/image.png "Diffuse")
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106560057992302603/image.png "Specular")
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106560524939956347/image.png "Every")
+![thumbnail](screenshots/light_ambiant.png "Ambiant")
+![thumbnail](screenshots/light_diffuse.png "Diffuse")
+![thumbnail](screenshots/light_specular.png "Specular")
+![thumbnail](screenshots/light_all.png "Every")
 
 ## Materials
 
@@ -99,7 +99,7 @@ I used the same operations and equations as OpenGL for this, at least what [this
 
 Also most of them aren't tested, since the only one that's really useful is srcAlpha, 1-srcAlpha, Add.
 
-![thumbnail](https://cdn.discordapp.com/attachments/1077136420323475469/1105760220677943337/image.png "Blending")
+![thumbnail](screenshots/blending.png "Blending")
 
 ## Stencil buffer
 
@@ -107,13 +107,13 @@ A very basic stencil buffer was implemented, it supports writing to the buffer w
 
 It's currently used to create a simple outline effect on the models.
 
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106547026394628147/image.png "Stencil")
+![thumbnail](screenshots/stencil.png "Stencil")
 
 ## Perspective correction
 
 Perspective correction is implemented in the renderer, allowing for correct texture and color interpolation.
 
-![thumbnail](https://cdn.discordapp.com/attachments/1106509619616022659/1106548189261213836/image.png "PerspCorrect")
+![thumbnail](screenshots/perspective.png "PerspCorrect")
 
 
 ## Back face culling
